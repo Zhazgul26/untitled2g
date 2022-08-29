@@ -1,5 +1,6 @@
 import HomeWork19.DayOfWeek;
 
+import java.time.MonthDay;
 import java.util.Scanner;
 
 public class Main {
@@ -7,6 +8,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String a = sc.nextLine().toUpperCase();
         DayOfWeek days = DayOfWeek.valueOf(a);
+
         switch (days){
             case MONDAY -> System.out.println("Дуйшомбу куну жава окуйм ");
             case TUESDAY -> System.out.println("Шейшемби куну англис-тили сабагын окуйм");
@@ -15,6 +17,7 @@ public class Main {
             case FRIDAY -> System.out.println("Жума куну жава окуйм ");
             case SATURDAY -> System.out.println("Ишемби куну англис-тили сабагын окуйм ");
             case SUNDAY -> System.out.println("Жекшемби куну мен эс алам ");
+
         }
     }
 
