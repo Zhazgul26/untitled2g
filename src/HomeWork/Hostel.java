@@ -1,8 +1,8 @@
-package HomeWork18;
+package HomeWork;
 
 public class Hostel implements Arenda {
     private Person[] family;
-    private  String name;
+    private String name;
 
     public Hostel(Person[] family) {
         this.family = family;
@@ -13,6 +13,7 @@ public class Hostel implements Arenda {
     @Override
     public void utilites() {
         System.out.println("Биз оренда толойбуз ");
+
     }
 
     @Override
@@ -20,23 +21,25 @@ public class Hostel implements Arenda {
 
     }
 
-    public Person[] getFamily() {
+    public Object getFamily() {
         System.out.println("Отелде жашаган адамдар ");
-        for (Person person :family) {
+        for (Person person : family) {
             System.out.println(person);
+            return person;
 
         }
+
+
         return family;
     }
-
-    @Override
-    public String toString() {
-        return name;
+        @Override
+        public String toString () {
+            return name;
 
 
         }
 
-    public void getFamimly() {
+        public void getFamimly () {
 
     }
 }

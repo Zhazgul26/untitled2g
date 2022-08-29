@@ -1,44 +1,22 @@
-import HomeWork18.Apartment;
-import HomeWork18.Hostel;
-import HomeWork18.Hotel;
-import HomeWork18.Person;
+import HomeWork19.DayOfWeek;
 
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Person person1 = new Person("   Палина ");
-        Person person2 = new Person("     Вика ");
-        Person person3 = new Person("     Катя ");
-        Person person4 = new Person("      Оля ");
-        Person person5 = new Person("     Эмма ");
-        Person person6 = new Person("    Данил ");
-        Person person7 = new Person("   Деннис ");
-        Person person8 = new Person("    Алекс ");
-        Person person9 = new Person("    Федик ");
-        Person person10 = new Person("Екетерина");
-        Person person11 = new Person("   Любовь");
-        Person person12 = new Person("     Аня ");
-        Person person13 = new Person("   Алина ");
-        Person person14 = new Person("     Саша ");
-        Person person15 = new Person("   Керил ");
-
-
-        Person[] family1 = {person1, person2, person3, person4, person5};
-        Person[] family2 = {person11, person12, person13, person14, person15};
-        Person[] family3 = {person6, person7, person8, person9, person10};
-        Hotel hotel = new Hotel(family1);
-        Hostel hostel = new Hostel(family3);
-        Apartment apartment = new Apartment(family2);
-       hostel.utilites();
-       hostel.getFamimly();
-       hotel.utilites();
-       hotel.getFamimly();
-        apartment.utilites();
-        apartment.arenda();
-        hotel.getFamily();
-        hostel.getFamily();
-        apartment.getFamily();
+        Scanner sc = new Scanner(System.in);
+        String a = sc.nextLine().toUpperCase();
+        DayOfWeek days = DayOfWeek.valueOf(a);
+        switch (days){
+            case MONDAY -> System.out.println("Дуйшомбу куну жава окуйм ");
+            case TUESDAY -> System.out.println("Шейшемби куну англис-тили сабагын окуйм");
+            case WEDNESDAY -> System.out.println("Шаршемби куну жава окуйм  ");
+            case THURSDAY -> System.out.println("Бейшемби куну турк-тили сабагын окуйм ");
+            case FRIDAY -> System.out.println("Жума куну жава окуйм ");
+            case SATURDAY -> System.out.println("Ишемби куну англис-тили сабагын окуйм ");
+            case SUNDAY -> System.out.println("Жекшемби куну мен эс алам ");
+        }
     }
 
     }
+

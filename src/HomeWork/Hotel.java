@@ -1,35 +1,27 @@
-package HomeWork18;
+package HomeWork;
 
-public class Apartment implements Arenda {
+public class Hotel implements Utilites {
     private Person [] family;
-    private String name;
 
-    public Apartment (Person [] family){
+    public Hotel (Person [] family){
         this.family = family;
-        this.name = name;
 
     }
     @Override
     public void utilites() {
         System.out.println("Биз оренда толойбуз ");
+        for (Person person:family) {
+            System.out.println(person);
+        }
     }
-    @Override
-    public String toString() {
-        return name;
-    }
-
-    @Override
-    public void arenda() {
-
-    }
-
     public void getFamily(){
         System.out.println("Отелде жашаган адамдар ");
         for (Person person:family) {
             System.out.println(person);
-            person.getName();
-        }
-        
         }
     }
 
+    public void getFamimly() {
+
+    }
+}
